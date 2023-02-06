@@ -13,8 +13,11 @@ class Item(models.Model):
     price=models.FloatField()
     description=models.TextField(max_length=500)
     created_on=models.DateTimeField(auto_now_add=True)
-    typeItem= models.CharField(max_length=255)
+    type_item= models.CharField(max_length=255)
     estoque=models.ForeignKey("Estoque", on_delete=models.DO_NOTHING, null=True)
+
+    def __str__(self):
+        return str(str(self.title) + ' ' + str(self.title) +  ' '+ str(self.price))
 
 class Estoque(models.Model):
     uuid=models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
