@@ -9,9 +9,9 @@ def index(request):
 
 def add_item(request):
     
-
     return render(request,'front_end_crud/add_item.html')
     
+
 def save_item(request):
     if request.method== "POST":
         data=request.POST
@@ -29,13 +29,17 @@ def save_item(request):
         print(models.Item.objects.all())
         return redirect(add_item)
 
-def view_itens(request):
-    pass
 
-def dele_item(request):
+
+def view_itens(request):
+    itens=models.Item.objects.all()
+    context={'itens':itens}
+    return render(request, 'view', context)
+
+def delete_item(request):
     if request.method=="POST":
         data=request.POST
         uuid=data.get('uuid')
         status=models.Item.objects.get(uuid=uuid).delete()
         if status=='1':
-            
+            pass

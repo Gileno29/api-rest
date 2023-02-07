@@ -19,6 +19,8 @@ from estoque import  views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('estoque.urls')),
+    path('estoque/', include('estoque.urls')),
     
 ]
+
+
