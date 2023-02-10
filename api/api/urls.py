@@ -18,8 +18,10 @@ from django.urls import path, include
 from estoque import  views
 
 urlpatterns = [
+    path('',include('estoque.urls')),
     path('admin/', admin.site.urls),
     path('estoque/', include('estoque.urls')),
+
     
 ]
 
