@@ -52,7 +52,6 @@ def view_itens(request):
     context={'itens':itens}
     return render(request, 'view', context)
 
-
 def delete_item(request):
     if request.method=="POST":
         data=request.POST
