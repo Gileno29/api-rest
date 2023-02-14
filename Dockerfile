@@ -1,9 +1,9 @@
 FROM python:3.9-buster
 COPY  ./api /usr/local/app
 WORKDIR /usr/local/app
-RUN pip install -r /usr/local/app/api/requiriments.txt
+RUN pip install -r /usr/local/app/requiriments.txt
 EXPOSE 8000
-cmd ["python /api/manage.py runserver"]
+cmd ["python","manage.py", "runserver",  "0.0.0.0:8000"]
 
 
 
