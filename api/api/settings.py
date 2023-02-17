@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import psycopg2.extensions
 from django.conf.urls.static import static
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -82,13 +83,9 @@ DATABASES = {
         'USER': 'api',
         'PASSWORD': 'api',
         'HOST': 'db',
-        'PORT': '5432',
+        'PORT': '9000',
     },
 
-    'dbtest': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
 }
 
 
