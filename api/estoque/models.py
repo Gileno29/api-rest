@@ -4,9 +4,6 @@ from django.utils import timezone
 import uuid
 # reate your models here.
 
-
-
-
 class Item(models.Model):
     uuid=models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
     title=models.CharField(max_length=500)
