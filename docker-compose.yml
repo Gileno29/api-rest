@@ -1,7 +1,7 @@
   version: "3.3"
 
   services:
-    backend:
+    estoque:
       build: .
      
       command: /bin/bash  -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
@@ -11,6 +11,9 @@
         - 8000:8000
       depends_on:
         - db
+
+      networks:
+        - backend
     db:
       build: ./api/db/
       environment:
@@ -19,8 +22,11 @@
         - POSTGRES_PASSWORD=api
       volumes:
         - postgres_data:/var/lib/postgresql/data/
+      networks:
+        - backend
       
-      ports:
-        - 9000:5432
   volumes:
     postgres_data:
+
+  networks:
+    backend:

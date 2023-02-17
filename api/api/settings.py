@@ -83,7 +83,15 @@ DATABASES = {
         'USER': 'api',
         'PASSWORD': 'api',
         'HOST': 'db',
-        'PORT': '9000',
+        'PORT': '5432',
+    },
+    'teste': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'estoque',
+        'USER': 'api',
+        'PASSWORD': 'api',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     },
 
 }

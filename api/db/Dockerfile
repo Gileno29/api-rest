@@ -1,2 +1,3 @@
 FROM postgres:14.3
-EXPOSE 5432
+
+COPY ./carga.sql /docker-entrypoint-initdb.d/

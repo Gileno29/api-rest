@@ -3,7 +3,7 @@ COPY  ./api /usr/local/app
 WORKDIR /usr/local/app
 RUN pip install -r /usr/local/app/requiriments.txt
 RUN apt-get install libpq-dev && pip3 install psycopg2-binary
-RUN find './' -path "*/migrations/*.py*" -not -name "__init__.pyc*" -delete
+#RUN find './' -path "*/migrations/*.py*" -not -name "__init__.pyc*" -delete
 EXPOSE 8000
 #cmd ["python","manage.py", "runserver",  "0.0.0.0:8000"]
 
