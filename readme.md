@@ -1,4 +1,4 @@
-# Título do projeto
+# Rest API with Django Rest Framework
 
 Projeto de API Rest Full em Django com Rest Full Framework. Foi criado uma mini apliação de estoque apenas para simular dados reais que podem ser inseridos via interface gráfica, mas para quem preferir tem um script para polpulação do database no projeto.
 
