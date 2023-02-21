@@ -1,28 +1,30 @@
 
+
 {% include 'partials/menu.html' %}
-<div>
-    <h1>Lista de Itens<h1>
+<div class="container mt-5">
+    <h1 class="h3">Itens List<h1>
     
-        <div class="container">
+        <div class="container-fluid">
             <table class="table">
-                {% for i in items %}
+                
                         <thead>
                         <tr>
-                            <th scope="col">UUID</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Type</th>
-                            <th scope="col">Price</th>
+                            <th scope="col" class="h5">UUID</th>
+                            <th scope="col" class="h5">Name</th>
+                            <th scope="col" class="h5">Type</th>
+                            <th scope="col" class="h5">Price</th>
                         </tr>
                         </thead>
+                        {% for i in itens %}
                         <tbody>
                         <tr>
-                            <th>{%i.uuid%}</th>
-                            <td>{%i.name%}</td>
-                            <td>{%i.description%}</td>
-                            <td>{%i.price%}</td>
+                            <th class="h5">{{ i.uuid }}</th>
+                            <td class="h5">{{ i.title }}</td>
+                            <td class="h5">{{ i.description }}</td>
+                            <td class="h5">{{ i.price }}</td>
                         </tr>
                         </tbody>
-                {% end if %}
+                {% endfor %}
               </table>
 
         </div>
