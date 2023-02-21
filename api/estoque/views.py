@@ -1,6 +1,8 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponseRedirect
 from . import models
+from rest_framework import viewsets, permissions
+from . import serializers
 
 # Create your views here.
 def index(request):
@@ -59,3 +61,9 @@ def delete_item(request):
         status=models.Item.objects.get(uuid=uuid).delete()
         if status=='1':
             pass
+
+
+class EstoqueViewSet(viewsets.ModelViewSet):
+    queryset = models.Estoque.objects.all()
+    serializer_class = serializers.EstoqueSerializer
+    permission_classes = [permissions.IsAuthenticated]

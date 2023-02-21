@@ -18,6 +18,7 @@ from django.urls import path, include
 from estoque import  views
 
 urlpatterns = [
+    path('api/v1/', include('estoque.urls_api', namespace='api')),
     path('',include('estoque.urls')),
     path('admin/', admin.site.urls),
     path('estoque/', include('estoque.urls')),
