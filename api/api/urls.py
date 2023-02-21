@@ -22,8 +22,8 @@ urlpatterns = [
     path('',include('estoque.urls')),
     path('admin/', admin.site.urls),
     path('estoque/', include('estoque.urls')),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
-    
 ]
 
 

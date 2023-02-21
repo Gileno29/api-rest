@@ -5,7 +5,7 @@ import uuid
 
 # reate your models here.
 class Item(models.Model):
-    uuid=models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
+    uuid=models.UUIDField(default=uuid.uuid4, editable=False, unique=True, primary_key=True)
     title=models.CharField(max_length=500)
     price=models.FloatField()
     description=models.TextField(max_length=500)
@@ -17,7 +17,7 @@ class Item(models.Model):
         return str(str(self.title) + ' ' + str(self.title) +  ' '+ str(self.price))
 
 class Estoque(models.Model):
-    uuid=models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
+    uuid=models.UUIDField(default=uuid.uuid4, editable=False, unique=True, primary_key=True)
     name=models.CharField(max_length=50, null=False, default='Meu estoque')  
     create_on=models.DateTimeField(default=timezone.now)
     minimum=models.BigIntegerField(default=5)

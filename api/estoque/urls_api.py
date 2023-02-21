@@ -4,12 +4,8 @@ from .views import EstoqueViewSet
 from .models import Estoque
 app_name='estoque'
 
-router = DefaultRouter(trailing_slash=False)
-router.register(r'api', EstoqueViewSet)
-
-app_name = 'estoque'
 
 router = DefaultRouter(trailing_slash=False)
-router.register(r'estoque', EstoqueViewSet)
+router.register(r'estoque-api', EstoqueViewSet)
 
 urlpatterns = router.urls

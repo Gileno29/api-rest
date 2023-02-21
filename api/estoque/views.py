@@ -3,6 +3,9 @@ from django.http import HttpResponseRedirect
 from . import models
 from rest_framework import viewsets, permissions
 from . import serializers
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication, TokenAuthentication
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.settings import api_settings
 
 # Create your views here.
 def index(request):
@@ -64,6 +67,7 @@ def delete_item(request):
 
 
 class EstoqueViewSet(viewsets.ModelViewSet):
+    authentication_classes = (SessionAuthentication, BasicAuthentication, TokenAuthentication)
     queryset = models.Estoque.objects.all()
     serializer_class = serializers.EstoqueSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [IsAuthenticatedOrReadOnly]

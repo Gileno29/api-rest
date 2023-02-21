@@ -9,14 +9,14 @@
         
         <div class="panel-body">
           
-          <form action="/estoque/saveitem" class="form-horizontal" method="post">
+          <form action="/estoque/saveestoque" class="form-horizontal" method="post">
             {% csrf_token %}
             <fieldset>
               <legend>Estoque</legend>
               <div class="form-group">
                 <label for="nome" class="col-sm-2 control-label">name</label>
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="title" name="title">
+                  <input type="text" class="form-control" id="title" name="name">
                 </div>
               </div>
               

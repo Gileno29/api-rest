@@ -5,7 +5,8 @@ class EstoqueSerializer(serializers.ModelSerializer):
     class Meta:
         model= Estoque
         fields = [
-            '__all__'
-            #'uuid'
-            #'name',
+            'uuid',
+            'name',
+            'create_on',
+            'minimum'
         ]
