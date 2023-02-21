@@ -50,7 +50,7 @@ def save_estoque(request):
 def view_itens(request):
     itens=models.Item.objects.all()
     context={'itens':itens}
-    return render(request, 'view', context)
+    return render(request, 'front_end_crud/items.html', context)
 
 def delete_item(request):
     if request.method=="POST":

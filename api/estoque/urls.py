@@ -8,5 +8,6 @@ urlpatterns = [
     path('additem', views.add_item, name="additem"),
     path('saveitem', views.save_item, name="saveitem"),
     path('addestoque', views.create_estoque, name="addestoque"),
-    path('estoque', views.estoque, name='estoque')
+    path('estoque', views.estoque, name='estoque'),
+    path('viewitems', views.view_itens, name='viewitems')
 ]
