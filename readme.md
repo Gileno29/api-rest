@@ -1,6 +1,10 @@
 # Rest API with Django Rest Framework
 
-Projeto de API Rest Full em Django com Rest Full Framework. Foi criado uma mini apliação de estoque apenas para simular dados reais que podem ser inseridos via interface gráfica, mas para quem preferir tem um script para polpulação do database no projeto.
+- Projeto de API Rest Full em Django com Rest Full Framework. Foi criado uma mini apliação de estoque apenas para simular dados reais que podem ser inseridos via interface gráfica, mas para quem preferir tem um script para polpulação do database no projeto.
+
+------------------------------- English Version -------------------------------
+
+- Full Rest API project in Django with Rest Full Framework. A mini inventory application has been created only to simulate real data that can be entered via graphical interface, but for those who prefer have a script for polpulação of the database in the project.
 
 ## 🚀 Começando
 
@@ -51,33 +55,12 @@ sudo docker run hello-world
 ```
 Documentação oficial do  [Docker](https://docs.docker.com/engine/install/ubuntu/) 
 
+## 📦 Rodando a aplicação
 
-Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
-
-## ⚙️ Executando os testes
-
-Explicar como executar os testes automatizados para este sistema.
-
-### 🔩 Analise os testes de ponta a ponta
-
-Explique que eles verificam esses testes e porquê.
-
+para rodar a aplicação basta usar usar o docker compose:
+``` 
+docker compose up -d
 ```
-Dar exemplos
-```
-
-### ⌨️ E testes de estilo de codificação
-
-Explique que eles verificam esses testes e porquê.
-
-```
-Dar exemplos
-```
-
-## 📦 Implantação
-
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
-
 ## 🛠️ Construído com
 
 Mencione as ferramentas que você usou para criar seu projeto

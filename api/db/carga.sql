@@ -1,27 +1,16 @@
+SELECT 'CREATE DATABASE estoque'
+WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'mydb');
+CREATE ROLE api WITH LOGIN PASSWORD 'api@docker';
+CREATE ROLE leitura WITH LOGIN PASSWORD 'leitura@docker';
 
-CREATE database IF NOT EXISTS estoque;
 
-INSERT INTO public.estoque_item
-(uuid, title, price, description, created_on, type_item, estoque_id)
-VALUES('56a8266e-b1ee-11ed-afa1-0242ac120002', 'caneta', 0, 'canetas', '', 'Nao Perecivel', NULL);
-
-INSERT INTO public.estoque_item
-(uuid, title, price, description, created_on, type_item, estoque_id)
-VALUES('99113f80-b1f4-11ed-afa1-0242ac120002', '', 0, '', '', '', 0);
-
-INSERT INTO public.estoque_item
-(uuid, title, price, description, created_on, type_item, estoque_id)
-VALUES(?, '', 0, '', '', '', 0);
-
-INSERT INTO public.estoque_item
-(uuid, title, price, description, created_on, type_item, estoque_id)
-VALUES(?, '', 0, '', '', '', 0);
-
-INSERT INTO public.estoque_item
-(uuid, title, price, description, created_on, type_item, estoque_id)
-VALUES(?, '', 0, '', '', '', 0);
-
-INSERT INTO public.estoque_item
-(uuid, title, price, description, created_on, type_item, estoque_id)
-VALUES(?, '', 0, '', '', '', 0);
-
+GRANT CONNECT ON DATABASE "estoque" TO "leitura";
+GRANT USAGE ON SCHEMA public TO "leitura"; 
+REVOKE CREATE ON SCHEMA public FROM PUBLIC; 
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO "leitura"; 
+GRANT EXECUTE ON ALL PROCEDURES IN SCHEMA public TO "leitura"; 
+GRANT ALL PRIVILEGES ON DATABASE "docker" TO "leitura"; 
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO "leitura"; 
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO "leitura"; 
+REVOKE GRANT OPTION FOR CREATE ON DATABASE estoque FROM leitura; 
+REVOKE INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA PUBLIC FROM leitura;

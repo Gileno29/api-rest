@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'api.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'TESTE': {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'estoque',
         'USER': 'api',
@@ -86,7 +86,7 @@ DATABASES = {
         'HOST': 'db',
         'PORT': '5432',
     },
-    'default': {
+    'teste': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'estoque',
         'USER': 'api',
