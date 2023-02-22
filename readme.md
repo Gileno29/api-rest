@@ -62,9 +62,6 @@ para rodar a aplicação basta usar usar o docker compose:
 docker compose up -d
 ```
 ## 🛠️ Construído com
-
-Mencione as ferramentas que você usou para criar seu projeto
-
 * [Docker](https://docs.docker.com/) - Para conteinerização
 * [Django](https://docs.djangoproject.com/en/4.1/) - Framework Backend
 * [Booststrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - Framework Frontend
