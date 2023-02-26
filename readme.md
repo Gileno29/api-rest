@@ -54,7 +54,7 @@ sudo docker run hello-world
 
 ## 📦 Rodando a aplicação
 
-### para rodar a aplicação basta usar usar o docker compose:
+ para rodar a aplicação basta usar usar o docker compose:
 ``` 
 docker compose up -d --build
 ```
