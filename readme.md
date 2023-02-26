@@ -50,7 +50,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 ```
 sudo docker run hello-world
 ```
-### Documentação oficial do  [Docker](https://docs.docker.com/engine/install/ubuntu/) 
+ Documentação oficial do  [Docker](https://docs.docker.com/engine/install/ubuntu/) 
 
 ## 📦 Rodando a aplicação
 
@@ -60,13 +60,13 @@ docker compose up -d --build
 ```
 
 
-### Se você quiser rodar sem o docker, vai ser necessario instalar o postgres em seu ambiente local e alám das libs que estão no requeriments.txt
-### end points da api:
+ Se você quiser rodar sem o docker, vai ser necessario instalar o postgres em seu ambiente local e alám das libs que estão no requeriments.txt
+ end points da api:
 ```
 "estoque-api": "http://localhost:8000/api/v1/estoque-api",
 "estoque-api/itens": "http://localhost:8000/api/v1/estoque-api/itens"
 ```
-### O APP disponibiliza um CRUD para cadastro dos dados caso precise, ou pode usar o sql com dados para inserir direto no banco.
+ O APP disponibiliza um CRUD para cadastro dos dados caso precise, ou pode usar o sql com dados para inserir direto no banco.
  
  - Data Base: estoque
  - Usuario: api
