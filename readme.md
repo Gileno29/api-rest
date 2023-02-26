@@ -59,12 +59,17 @@ Documentação oficial do  [Docker](https://docs.docker.com/engine/install/ubunt
 
 para rodar a aplicação basta usar usar o docker compose:
 ``` 
-docker compose up -d
+docker compose up -d --build
 ```
 ## 🛠️ Construído com
 * [Docker](https://docs.docker.com/) - Para conteinerização
 * [Django](https://docs.djangoproject.com/en/4.1/) - Framework Backend
 * [Booststrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - Framework Frontend
+
+
+
+
+
 
 ## 🖇️ Colaborando
 
