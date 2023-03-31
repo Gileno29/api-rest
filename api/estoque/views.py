@@ -71,3 +71,10 @@ class EstoqueViewSet(viewsets.ModelViewSet):
     queryset = models.Estoque.objects.all()
     serializer_class = serializers.EstoqueSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
+
+
+class ItemViewSet(viewsets.ModelViewSet):
+    authentication_classes = (SessionAuthentication, BasicAuthentication, TokenAuthentication)
+    queryset = models.Item.objects.all()
+    serializer_class = serializers.EstoqueSerializer
+    permission_classes = [IsAuthenticatedOrReadOnly]

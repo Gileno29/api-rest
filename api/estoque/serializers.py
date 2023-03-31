@@ -1,4 +1,4 @@
-from .models import Estoque
+from .models import Estoque, Item
 from rest_framework import serializers
 
 class EstoqueSerializer(serializers.ModelSerializer):
@@ -10,3 +10,8 @@ class EstoqueSerializer(serializers.ModelSerializer):
             'create_on',
             'minimum'
         ]
+
+class ItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model= Item
+        fields='__all__'
